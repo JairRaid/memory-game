@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-grey-100: #f2f2f2;
+  --color-grey-50: #fcfcfc;
+  --color-blue-950: #152938;
+  --color-blue-800: #304859;
+  --color-blue-400: #7191a5;
+  --color-blue-350: #6395b8;
+  --color-blue-300: #bcced9;
+  --color-blue-100: #dfe7ec;
+  --color-orange-400: #fda214;
+  --color-orange-300: #ffb84a;
+
+  --font-atkinson: "Atkinson Hyperlegible", sans-serif;
+}
+
+@layer base {
+  /* html,
+  body,
+  #root {
+    @apply h-screen;
+  } */
+  body {
+    @apply font-atkinson;
+  }
+
+  h1 {
+    @apply text-gray-50 text-[2rem] font-bold leading-[125%] text-center;
+  }
+
+  legend {
+    @apply text-blue-400 text-[0.9375rem] md:text-[1.25rem] font-bold leading-[125%];
+  }
+
+  input + span {
+    @apply text-grey-50 text-[0.9375rem] md:text-[1.625rem] font-bold leading-[125%] transition;
+  }
+
+  .button-big {
+    @apply text-grey-50 text-[1.125rem] md:text-[2rem] font-bold bg-orange-400 rounded-full transition hover:bg-orange-300;
+  }
+
+  .button-secondary {
+    @apply text-blue-800 text-[1.125rem] font-bold bg-blue-100 rounded-full transition hover:bg-blue-350 hover:text-white;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  .center-both {
+    @apply items-center justify-center;
+  }
+
+  .card {
+    @apply text-grey-50 font-bold leading-[125%] bg-blue-800 rounded-full transition;
+  }
+
+  .is-flipped {
+    @apply bg-blue-300;
+  }
+
+  .is-matched {
+    @apply bg-orange-300;
+  }
+}
