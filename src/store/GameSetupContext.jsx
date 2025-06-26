@@ -9,7 +9,7 @@ export const GameSetupProvider = ({ children }) => {
   const [setupState, setupDispatch] = useReducer(gameSetupReducer, {
     theme: "numbers",
     players: "1",
-    gridSize: playerSetup.gridSize || "4x4",
+    gridSize: playerSetup === null ? "4x4" : playerSetup.gridSize,
   });
 
   const ctxValue = { setupState, setupDispatch };
